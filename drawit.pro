@@ -1,4 +1,6 @@
-QT       += core gui
+QT       += core gui widgets network
+RESOURCES += mainmenu.qrc \
+    photos.qrc
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,7 +19,17 @@ HEADERS += \
 
 FORMS +=
 
+TRANSLATIONS += drawit_en.ts \
+                drawit_ru.ts
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    mainmenu.qrc
+
+TRANSLATIONS += \
+    drawit_en_US.ts \
+    drawit_ru_RU.ts
